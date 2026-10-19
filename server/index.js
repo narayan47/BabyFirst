@@ -17,7 +17,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const allowedOrigins = (
-  process.env.CLIENT_ORIGIN || "http://localhost:5173"
+  process.env.CLIENT_ORIGIN || "http://localhost:5173" || "https://babyfirst.onrender.com"
 )
   .split(",")
   .map((origin) => origin.trim())
