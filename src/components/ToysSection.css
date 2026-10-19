@@ -1,0 +1,147 @@
+
+.toys-section {
+  padding: 55px 20px;
+}
+
+.toys-home-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1050px;
+  min-height: 300px;
+  margin: 0 auto;
+  padding: clamp(25px, 5vw, 55px);
+  overflow: hidden;
+  border: 2px solid #30274a;
+  border-radius: 28px;
+  background: #f2eaff;
+  color: #30274a;
+  box-shadow: 7px 7px 0 #30274a;
+}
+
+.toys-home-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 540px;
+}
+
+.toys-home-copy h2 {
+  margin: 15px 0;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.05;
+}
+
+.toys-home-copy h2 em {
+  color: #8b62c9;
+  font-family: Georgia, serif;
+}
+
+.toys-home-copy p {
+  max-width: 470px;
+  line-height: 1.7;
+}
+
+.play-games-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+  padding: 14px 20px;
+  border: 2px solid #30274a;
+  border-radius: 999px;
+  background: #ffd968;
+  color: #30274a;
+  font-weight: 850;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.play-games-button:hover {
+  transform: translateY(-3px) rotate(-1deg);
+}
+
+.toys-home-art {
+  position: relative;
+  flex: 0 0 250px;
+  height: 220px;
+}
+
+.toys-home-art span {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  animation: nursery-float 3s ease-in-out infinite alternate;
+}
+
+.toy-art-star {
+  top: 4px;
+  right: 35px;
+  font-size: 3rem;
+}
+
+.toy-art-bear {
+  top: 50px;
+  left: 35px;
+  font-size: 6rem;
+}
+
+.toy-art-moon {
+  right: 5px;
+  bottom: 15px;
+  font-size: 4rem;
+  animation-delay: 0.6s !important;
+}
+
+.toy-art-block {
+  bottom: 5px;
+  left: 10px;
+  font-size: 3rem;
+}
+
+.toy-art-sparkle {
+  top: 25px;
+  left: 0;
+  font-size: 2rem;
+  animation-delay: 1s !important;
+}
+
+@keyframes nursery-float {
+  from { transform: translateY(0) rotate(-5deg); }
+  to { transform: translateY(-10px) rotate(5deg); }
+}
+
+@media (max-width: 650px) {
+  .toys-section {
+    padding: 35px 14px;
+  }
+
+  .toys-home-card {
+    padding: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .toys-home-art {
+    width: 100%;
+    flex-basis: auto;
+    height: 150px;
+  }
+
+  .toy-art-bear {
+    left: 25%;
+    top: 5px;
+  }
+
+  .toy-art-star {
+    right: 25%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toys-home-art span {
+    animation: none;
+  }
+}
